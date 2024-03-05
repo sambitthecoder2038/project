@@ -1,0 +1,16 @@
+.bg-mybg{
+    background-color: crimson;
+  }
+  
+  .navbar-brand {
+    color: rgb(7, 177, 245);
+  }
+  .caro{
+    height: 40rem;
+    width: 100rem;
+  }
+  .navbar-expand .navbar-nav .nav-link{
+    margin-left: 30px !important;
+  }
+  
+  
