@@ -4,6 +4,7 @@ function Carddetails() {
   useEffect(() => {
     getUser();
   }, []);
+
   const getUser = () => {
     fetch("https://jsonplaceholder.org/users")
       .then((response) => {

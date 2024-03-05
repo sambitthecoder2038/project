@@ -21,7 +21,7 @@ const cardData = [
 
 function Hcard() {
   const navigate = useNavigate();
-  const handleChange = () => {};
+  //   const handleChange = () => {};
   return (
     <Container>
       <Row className="fs-2 fw-bold mt-4">Online Experience</Row>
