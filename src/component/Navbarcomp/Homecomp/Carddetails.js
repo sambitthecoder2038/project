@@ -1,6 +1,7 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
 function Carddetails() {
+  const [usersDetails, setUsersDetails] = useState([]);
   useEffect(() => {
     getUser();
   }, []);
@@ -14,13 +15,26 @@ function Carddetails() {
         return response.json();
       })
       .then((users) => {
-        console.log(users);
+        setUsersDetails(users);
+        // console.log(users);
       })
       .catch((error) => {
         console.error("There was a problem with the fetch operation:", error);
       });
   };
-  return <div></div>;
+
+  console.log(usersDetails, "123456");
+  return (
+    <div className="display-data">
+      hello
+      {usersDetails &&
+        usersDetails.map((item) => (
+          <div key={item.id}>
+            {item.firstname},{item.login.username}
+          </div>
+        ))}
+    </div>
+  );
 }
 
 export default Carddetails;
