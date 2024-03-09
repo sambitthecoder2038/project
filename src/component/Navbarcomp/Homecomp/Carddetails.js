@@ -46,17 +46,6 @@ function Carddetails() {
                   <td>{item.lastname}</td>
                   <td>{item.login.username}</td>
                 </tr>
-                {/* <tr>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr> */}
               </tbody>
             </Table>
           </div>
