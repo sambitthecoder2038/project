@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import Table from "react-bootstrap/Table";
 
 function Carddetails() {
   const [usersDetails, setUsersDetails] = useState([]);
@@ -26,11 +27,38 @@ function Carddetails() {
   console.log(usersDetails, "123456");
   return (
     <div className="display-data">
-      hello
       {usersDetails &&
         usersDetails.map((item) => (
           <div key={item.id}>
-            {item.firstname},{item.login.username}
+            <Table striped bordered hover>
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>First Name</th>
+                  <th>Last Name</th>
+                  <th>Username</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>{item.id}</td>
+                  <td>{item.firstname}</td>
+                  <td>{item.lastname}</td>
+                  <td>{item.login.username}</td>
+                </tr>
+                {/* <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr> */}
+              </tbody>
+            </Table>
           </div>
         ))}
     </div>
